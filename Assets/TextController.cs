@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TextController : MonoBehaviour {
 
+	public Text text;
+
 	// Use this for initialization
 	void Start () {
 	
