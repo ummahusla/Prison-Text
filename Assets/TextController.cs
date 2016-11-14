@@ -53,6 +53,18 @@ public class TextController : MonoBehaviour {
 		
 	}
 	
+	void state_sheet_1 () {
+	
+		text.text = "Holding a mirror in your hand doesn't make the sheets look " +
+					"any better.\n\n" +
+					"Press R to Return to roaming your cell." ;
+				
+		if(Input.GetKeyDown(KeyCode.R)) {
+			myState = States.cell_mirror;
+		}
+	}
+	
+	
 	void state_lock_0 () {
 		
 		text.text = "This is one of the button locks. You have no idea what the " + 
@@ -64,6 +76,20 @@ public class TextController : MonoBehaviour {
 			myState = States.cell;
 		}	
 		
+	}
+	
+	void state_lock_1 () { 
+	
+		text.text = "You carefully put the mirror through the bars, and turn it round " +
+					"so you can see the lock. You can just make out fingerprints around " +
+					"the buttons. You press the dirty buttons, and hear a click.\n\n" +
+					"Press O to Open, or R to Return to your cell.";
+					
+		if(Input.GetKeyDown(KeyCode.O)) {
+			myState = States.corridor_0;
+		} else if(Input.GetKeyDown(KeyCode.R)) {
+			myState = States.cell_mirror;
+		}
 	}
 	
 }
