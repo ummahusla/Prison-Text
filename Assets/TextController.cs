@@ -20,6 +20,8 @@ public class TextController : MonoBehaviour {
 			state_cell();
 		} else if(myState == States.sheets_0) {
 			state_sheet_0();
+		} else if(myState == States.lock_0) {
+			state_lock_0();
 		}
 	}
 	
@@ -33,12 +35,28 @@ public class TextController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.S)) {
 			myState = States.sheets_0;
 		}	
+		if(Input.GetKeyDown(KeyCode.L)) {
+			myState = States.lock_0;
+		}	
 		
 	}
 	
 	void state_sheet_0 () {
 		
 		text.text = "You can't believe you sleep in this things. Surely it's " + 
+					"time somebody change them. The pleasure of prison life" + 
+					"I guess!\n\n" + 
+					"Press R to return to roaming your cell.";
+		
+		if(Input.GetKeyDown(KeyCode.R)) {
+			myState = States.cell;
+		}	
+		
+	}
+	
+	void state_lock_0 () {
+		
+		text.text = "Some stuff about lock_0 " + 
 					"time somebody change them. The pleasure of prison life" + 
 					"I guess!\n\n" + 
 					"Press R to return to roaming your cell.";
