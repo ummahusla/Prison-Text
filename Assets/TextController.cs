@@ -16,7 +16,9 @@ public class TextController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print(myState);
+		if(myState == States.cell) {
+			state_cell();
+		}
 	}
 	
 	void state_cell () {
@@ -27,7 +29,7 @@ public class TextController : MonoBehaviour {
 					"Press S to view Sheets, M to view Mirror and L to view Lock";
 					
 		if(Input.GetKeyDown(KeyCode.S)) {
-			
+			myState = States.sheets_0;
 		}
 		
 		if(Input.GetKeyDown(KeyCode.M)) {
