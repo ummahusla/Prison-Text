@@ -34,8 +34,7 @@ public class TextController : MonoBehaviour {
 					
 		if(Input.GetKeyDown(KeyCode.S)) {
 			myState = States.sheets_0;
-		}	
-		if(Input.GetKeyDown(KeyCode.L)) {
+		} else if(Input.GetKeyDown(KeyCode.L)) {
 			myState = States.lock_0;
 		}	
 		
@@ -56,9 +55,9 @@ public class TextController : MonoBehaviour {
 	
 	void state_lock_0 () {
 		
-		text.text = "Some stuff about lock_0 " + 
-					"time somebody change them. The pleasure of prison life" + 
-					"I guess!\n\n" + 
+		text.text = "This is one of the button locks. You have no idea what the " + 
+					"combination is. You wish you could somehow see where the dirty " + 
+					"fingerprints were, maybe that would help.\n\n" + 
 					"Press R to return to roaming your cell.";
 		
 		if(Input.GetKeyDown(KeyCode.R)) {
